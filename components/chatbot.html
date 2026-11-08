@@ -1,0 +1,44 @@
+<div id="chatbot-container" class="fixed bottom-6 right-6 z-50">
+  
+  <!-- Toggle Trigger Button -->
+  <button id="chatbot-toggle-btn" type="button" aria-label="Buka Chatbot Runey Assistant" class="w-14 h-14 bg-runey-pink text-runey-brown rounded-full shadow-lg flex items-center justify-center text-2xl hover:scale-110 active:scale-95 transition-all duration-200 border-2 border-white">
+    ✨
+  </button>
+
+  <!-- Chat Widget Window -->
+  <div id="chatbot-window" class="hidden absolute bottom-16 right-0 w-80 sm:w-96 bg-white rounded-cute shadow-2xl border-2 border-runey-pink/30 flex flex-col overflow-hidden max-h-[500px] transition-all">
+    
+    <!-- Widget Header -->
+    <div class="bg-runey-pink p-4 flex items-center justify-between text-runey-brown">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-lg">🌸</div>
+        <div>
+          <h3 class="font-handwritten font-bold text-base leading-none">Runey Assistant</h3>
+          <p class="text-[11px] text-runey-brown/80 font-medium">Teman Jelajah Karakter</p>
+        </div>
+      </div>
+      <button id="chatbot-close-btn" class="p-1 text-runey-brown/70 hover:text-runey-brown text-xl font-bold">&times;</button>
+    </div>
+
+    <!-- Chat Messages Container -->
+    <div id="chatbot-messages" class="p-4 space-y-3 overflow-y-auto h-80 bg-runey-cream/30 text-sm">
+      <div class="bg-white p-3 rounded-2xl rounded-tl-none border border-runey-pink/20 shadow-sm text-runey-brown">
+        Halo! 👋 Saya **Runey Assistant**. Ada yang bisa dibantu mengenai koleksi karakter imut Runey Handmade hari ini?
+      </div>
+    </div>
+
+    <!-- Suggested Actions -->
+    <div class="px-3 py-2 bg-white border-t border-runey-pink/10 flex gap-2 overflow-x-auto text-xs">
+      <button class="chat-quick-option bg-runey-cream text-runey-brown px-2.5 py-1 rounded-full border border-runey-pink/30 whitespace-nowrap hover:bg-runey-pink/20">Koleksi Produk</button>
+      <button class="chat-quick-option bg-runey-cream text-runey-brown px-2.5 py-1 rounded-full border border-runey-pink/30 whitespace-nowrap hover:bg-runey-pink/20">Cara Order</button>
+      <button class="chat-quick-option bg-runey-cream text-runey-brown px-2.5 py-1 rounded-full border border-runey-pink/30 whitespace-nowrap hover:bg-runey-pink/20">Tanya Admin</button>
+    </div>
+
+    <!-- Chat Input Form -->
+    <form id="chatbot-form" class="p-3 bg-white border-t border-runey-pink/20 flex gap-2">
+      <input id="chatbot-input" type="text" placeholder="Ketik pertanyaan..." class="flex-1 px-3 py-2 text-sm bg-runey-cream/40 border border-runey-pink/30 rounded-xl focus:outline-none focus:border-runey-pink text-runey-brown" autocomplete="off" />
+      <button type="submit" class="bg-runey-pink text-runey-brown px-4 py-2 rounded-xl font-semibold text-sm hover:bg-runey-pink-hover">Kirim</button>
+    </form>
+
+  </div>
+</div>

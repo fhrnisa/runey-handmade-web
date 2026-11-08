@@ -1,0 +1,52 @@
+<header class="sticky top-0 z-40 w-full bg-runey-cream/90 backdrop-blur-md border-b border-runey-pink/20 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-20">
+      
+      <!-- Brand Logo -->
+      <a href="index.html" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-10 h-10 rounded-full bg-runey-pink flex items-center justify-center text-runey-brown font-bold text-xl shadow-sm group-hover:scale-105 transition-transform">
+          🌸
+        </div>
+        <div class="flex flex-col">
+          <span class="font-handwritten text-2xl font-bold text-runey-brown group-hover:text-runey-pink transition-colors">Runey</span>
+          <span class="text-[10px] tracking-widest font-semibold uppercase text-runey-brown/70 -mt-1">Handmade</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center space-x-1 lg:space-x-2">
+        <a href="index.html" data-nav="index" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">Home</a>
+        <a href="shop.html" data-nav="shop" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">Shop</a>
+        <a href="about.html" data-nav="about" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">Our Story</a>
+        <a href="gallery.html" data-nav="gallery" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">Gallery</a>
+        <a href="faq.html" data-nav="faq" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">FAQ</a>
+        <a href="contact.html" data-nav="contact" class="nav-link px-4 py-2 rounded-full text-sm font-semibold text-runey-brown hover:text-runey-pink hover:bg-white/60 transition-all">Contact</a>
+      </nav>
+
+
+      <!-- Mobile Hamburger Button -->
+      <div class="md:hidden flex items-center">
+        <button id="mobile-menu-btn" type="button" aria-label="Toggle Navigation Menu" class="p-2 rounded-xl text-runey-brown hover:bg-runey-pink/20 focus:outline-none transition-colors">
+          <svg id="menu-icon-open" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <svg id="menu-icon-close" class="w-7 h-7 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Drawer -->
+  <div id="mobile-menu" class="hidden md:hidden bg-runey-cream border-b border-runey-pink/20 px-4 pt-2 pb-6 space-y-2">
+    <a href="index.html" data-nav="index" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">Home</a>
+    <a href="shop.html" data-nav="shop" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">Shop</a>
+    <a href="about.html" data-nav="about" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">Our Story</a>
+    <a href="gallery.html" data-nav="gallery" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">Gallery</a>
+    <a href="faq.html" data-nav="faq" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">FAQ</a>
+    <a href="contact.html" data-nav="contact" class="mobile-nav-link block px-4 py-2.5 rounded-xl text-base font-semibold text-runey-brown hover:bg-white">Contact</a>
+    <div class="pt-2">
+      <a href="shop.html" class="w-full cute-btn-primary text-center justify-center">
+        <span>Explore Collection</span>
+      </a>
+    </div>
+  </div>
+</header>

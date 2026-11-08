@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            runey: {
+                pink: '#FBAD9E',
+                yellow: '#FFE072',
+                green: '#A8D6A0',
+                cream: '#FFF8F2',
+                brown: '#5A4038',
+                'pink-hover': '#f99784',
+                'brown-light': '#7a5a50'
+            }
+            },
+            fontFamily: {
+            handwritten: ['"Fredoka"', 'cursive', 'sans-serif'],
+            sans: ['"Quicksand"', 'sans-serif']
+            },
+            borderRadius: {
+            'cute': '1.5rem',
+            'cute-lg': '2.5rem'
+            },
+            boxShadow: {
+            'cute': '0 8px 24px -4px rgba(90, 64, 56, 0.08)',
+            'cute-hover': '0 12px 32px -4px rgba(90, 64, 56, 0.15)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
+
+  <!-- Reusable Navigation Bar Header -->
+  <div id="navbar-container"></div>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <!-- Welcome Message -->
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-runey-pink bg-runey-pink/10 px-4 py-1.5 rounded-full">Sapa Kami</span>
+        <h1 class="text-4xl sm:text-5xl font-bold font-handwritten text-runey-brown">
+          Let's Stay Connected!
+        </h1>
+        <p class="text-sm sm:text-base text-runey-brown/80">
+          Punya pertanyaan seputar ketersediaan produk, karakter favorit, atau proses pemesanan? Kami dengan senang hati melayanimu.
+        </p>
+      </div>
+
+      <!-- Contact Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Direct Order via WhatsApp Card -->
+        <div class="bg-white p-8 rounded-cute-lg border-2 border-runey-pink/30 shadow-sm flex flex-col justify-between space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 bg-runey-pink/20 rounded-2xl flex items-center justify-center text-3xl">
+              💬
+            </div>
+            <h2 class="text-2xl font-bold font-handwritten">Pemesanan WhatsApp</h2>
+            <p class="text-sm text-runey-brown/80 leading-relaxed">
+              Layanan paling cepat dan fleksibel untuk memesan produk atau bertanya langsung pada admin Runey.
+            </p>
+          </div>
+
+          <a id="contact-wa-btn" href="#" target="_blank" rel="noopener noreferrer" class="cute-btn-primary justify-center text-sm py-3 shadow-sm">
+            <span>Chat Admin via WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Social Media & Studio Info Card -->
+        <div class="bg-white p-8 rounded-cute-lg border-2 border-runey-yellow/50 shadow-sm space-y-6">
+          <div class="space-y-4">
+            <div class="w-14 h-14 bg-runey-yellow/30 rounded-2xl flex items-center justify-center text-3xl">
+              📲
+            </div>
+            <h2 class="text-2xl font-bold font-handwritten">Media Sosial</h2>
+            <p class="text-sm text-runey-brown/80 leading-relaxed">
+              Ikuti kabar rilis karakter baru, intip meja studio, dan ikuti kegiatan kami di platform kesayanganmu.
+            </p>
+          </div>
+
+          <div class="space-y-3 pt-2">
+            <a id="contact-ig-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-runey-cream hover:bg-runey-pink/20 transition-colors font-semibold text-sm">
+              <span>📸 Instagram: @runeyhandmade</span>
+            </a>
+            <a id="contact-tiktok-link" href="#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 p-3 rounded-xl bg-runey-cream hover:bg-runey-pink/20 transition-colors font-semibold text-sm">
+              <span>🎵 TikTok: @runeyhandmade</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Reusable Chatbot -->
+  <div id="chatbot-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener("componentsLoaded", () => {
+      const waBtn = document.getElementById("contact-wa-btn");
+      if (waBtn && RUNEY_CONFIG.whatsapp.number) {
+        const msg = encodeURIComponent(RUNEY_CONFIG.whatsapp.defaultMessage);
+        waBtn.href = `https://wa.me/${RUNEY_CONFIG.whatsapp.number}?text=${msg}`;
+      }
+
+      const igLink = document.getElementById("contact-ig-link");
+      if (igLink && RUNEY_CONFIG.socials.instagram) {
+        igLink.href = RUNEY_CONFIG.socials.instagram;
+      }
+
+      const tiktokLink = document.getElementById("contact-tiktok-link");
+      if (tiktokLink && RUNEY_CONFIG.socials.tiktok) {
+        tiktokLink.href = RUNEY_CONFIG.socials.tiktok;
+      }
+    });
+  </script>
+</body>
+</html>

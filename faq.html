@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            runey: {
+                pink: '#FBAD9E',
+                yellow: '#FFE072',
+                green: '#A8D6A0',
+                cream: '#FFF8F2',
+                brown: '#5A4038',
+                'pink-hover': '#f99784',
+                'brown-light': '#7a5a50'
+            }
+            },
+            fontFamily: {
+            handwritten: ['"Fredoka"', 'cursive', 'sans-serif'],
+            sans: ['"Quicksand"', 'sans-serif']
+            },
+            borderRadius: {
+            'cute': '1.5rem',
+            'cute-lg': '2.5rem'
+            },
+            boxShadow: {
+            'cute': '0 8px 24px -4px rgba(90, 64, 56, 0.08)',
+            'cute-hover': '0 12px 32px -4px rgba(90, 64, 56, 0.15)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
+
+  <!-- Reusable Navigation Bar Header -->
+  <div id="navbar-container"></div>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+      
+      <!-- Heading -->
+      <div class="text-center space-y-3">
+        <h1 class="text-4xl sm:text-5xl font-bold font-handwritten text-runey-brown">
+          Pertanyaan Umum (FAQ)
+        </h1>
+        <p class="text-sm sm:text-base text-runey-brown/80">
+          Temukan jawaban atas pertanyaan yang sering diajukan mengenai Runey Handmade.
+        </p>
+      </div>
+
+      <!-- Accordion Container -->
+      <div class="space-y-4">
+        
+        <!-- Q1 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Apa itu Runey Handmade?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Runey Handmade adalah brand lokal yang menghadirkan aksesori berkonsep "Cute & Collectible", berfokus pada gantungan kunci handmade berkarakter unik yang dilengkapi cerita spesial di balik setiap desainnya.
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Apakah produk benar-benar dibuat secara handmade?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Ya! Setiap item diproduksi secara teliti dengan kombinasi pengerjaan tangan pada aksen detail resin/clay dan bahan berkualitas, sehingga setiap item terasa hangat dan autentik.
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Bagaimana cara melakukan pemesanan?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Pemesanan dapat dilakukan langsung melalui tombol "Order via WhatsApp" pada halaman detail produk atau halaman Kontak. Kamu akan tersambung dengan Admin resmi kami secara otomatis.
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Bagaimana mengetahui ketersediaan produk?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Status produk ditampilkan secara jelas pada halaman Shop dan Detail Produk (seperti "Ready Stock" atau "Coming Soon"). Apabila ada pertanyaan mengenai jumlah stok, jangan ragu bertanya pada admin.
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Apakah tersedia pesanan kustom (custom order)?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Saat ini kami berfokus merilis koleksi berkala dengan seri karakter orisinal. Layanan custom order dalam skala terbatas dapat didiskusikan langsung dengan admin sesuai ketersediaan jadwal kreasi.
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item bg-white rounded-cute border border-runey-pink/30 overflow-hidden shadow-sm">
+          <button class="faq-trigger w-full p-5 text-left font-handwritten font-bold text-lg text-runey-brown flex justify-between items-center focus:outline-none">
+            <span>Bagaimana informasi pengemasan (packaging) produk?</span>
+            <span class="faq-icon text-runey-pink text-2xl transition-transform duration-200">+</span>
+          </button>
+          <div class="faq-content hidden p-5 pt-0 text-sm text-runey-brown/80 border-t border-runey-pink/10 leading-relaxed">
+            Setiap produk dikemas rapi menggunakan *backing card* berdesain eksklusif sesuai serinya yang memuat cerita penuh karakter, dimasukkan dalam pouch pelindung, dan dikirim aman menggunakan karton/bubble wrapper.
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Additional Question Box -->
+      <div class="bg-runey-yellow/30 p-6 rounded-cute border border-runey-yellow text-center space-y-3">
+        <h3 class="font-handwritten font-bold text-xl">Punya Pertanyaan Lain?</h3>
+        <p class="text-xs sm:text-sm text-runey-brown/80">
+          Tim admin kami siap membantu pertanyaanmu seputar produk dan pesanan.
+        </p>
+        <a href="contact.html" class="cute-btn-primary text-xs inline-block">
+          Hubungi Admin Sekarang &rarr;
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Reusable Chatbot -->
+  <div id="chatbot-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/faq.js"></script>
+</body>
+</html>

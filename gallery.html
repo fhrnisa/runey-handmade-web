@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            runey: {
+                pink: '#FBAD9E',
+                yellow: '#FFE072',
+                green: '#A8D6A0',
+                cream: '#FFF8F2',
+                brown: '#5A4038',
+                'pink-hover': '#f99784',
+                'brown-light': '#7a5a50'
+            }
+            },
+            fontFamily: {
+            handwritten: ['"Fredoka"', 'cursive', 'sans-serif'],
+            sans: ['"Quicksand"', 'sans-serif']
+            },
+            borderRadius: {
+            'cute': '1.5rem',
+            'cute-lg': '2.5rem'
+            },
+            boxShadow: {
+            'cute': '0 8px 24px -4px rgba(90, 64, 56, 0.08)',
+            'cute-hover': '0 12px 32px -4px rgba(90, 64, 56, 0.15)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
+
+  <!-- Reusable Navigation Bar Header -->
+  <div id="navbar-container"></div>
+
+  <main class="flex-grow py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <!-- Heading -->
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <h1 class="text-4xl sm:text-5xl font-bold font-handwritten text-runey-brown">
+          A Little Peek Into Runey
+        </h1>
+        <p class="text-sm sm:text-base text-runey-brown/80">
+          Dokumentasi momen kreatif, suasana meja studio, serta estetika visual dari setiap karya kami.
+        </p>
+      </div>
+
+      <!-- Photo Gallery Section -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold font-handwritten flex items-center gap-2">
+          <span>📷</span> <span>Product & Process Photography</span>
+        </h2>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div class="cute-card overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80" alt="Strawberry Donut Showcase" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-4 bg-white">
+              <p class="font-handwritten font-bold text-base">Sweet Bakery Details</p>
+              <p class="text-xs text-runey-brown/70">Foto studio koleksi gantungan kunci donat.</p>
+            </div>
+          </div>
+
+          <div class="cute-card overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Matcha Donut Showcase" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-4 bg-white">
+              <p class="font-handwritten font-bold text-base">Matcha Theme Setup</p>
+              <p class="text-xs text-runey-brown/70">Tampilan nuansa hijau pastel yang menenangkan.</p>
+            </div>
+          </div>
+
+          <div class="cute-card overflow-hidden group">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&q=80" alt="Behind the scenes process" class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="p-4 bg-white">
+              <p class="font-handwritten font-bold text-base">Behind The Scenes</p>
+              <p class="text-xs text-runey-brown/70">Proses penyelesaian detail handmade secara manual.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Video Showcase Section -->
+      <div class="space-y-6">
+        <h2 class="text-2xl font-bold font-handwritten flex items-center gap-2">
+          <span>🎥</span> <span>Video Teaser & Brand Introduction</span>
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- HTML5 Video Player Placeholder -->
+          <div class="bg-white p-4 rounded-cute border border-runey-pink/20 space-y-3">
+            <div class="aspect-video bg-runey-brown/10 rounded-xl overflow-hidden flex items-center justify-center">
+              <video controls class="w-full h-full object-cover">
+                <source src="https://assets.mixkit.co/videos/preview/mixkit-craftsman-working-with-clay-in-his-workshop-41139-large.mp4" type="video/mp4">
+                Browser kamu tidak mendukung pemutar video HTML5.
+              </video>
+            </div>
+            <h3 class="font-handwritten font-bold text-lg">Proses Pembuatan Handmade</h3>
+            <p class="text-xs text-runey-brown/70">Melihat lebih dekat ketelitian dalam pembuatan karakter Runey.</p>
+          </div>
+
+          <!-- Interactive Embedded Preview -->
+          <div class="bg-white p-4 rounded-cute border border-runey-pink/20 space-y-3 flex flex-col justify-between">
+            <div class="aspect-video bg-runey-yellow/20 rounded-xl flex items-center justify-center border border-dashed border-runey-pink">
+              <div class="text-center p-6 space-y-2">
+                <span class="text-4xl">🎬</span>
+                <p class="font-handwritten font-bold text-base text-runey-brown">Official Brand Video Teaser</p>
+                <p class="text-xs text-runey-brown/70">Video promosi eksklusif akan segera diperbarui!</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-handwritten font-bold text-lg">Koleksi Sweet Bakery Series</h3>
+              <p class="text-xs text-runey-brown/70">Video perkenalan seri pertama dari Runey Handmade.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="text-center pt-6">
+        <a href="shop.html" class="cute-btn-primary text-sm px-8 py-3">
+          <span>Jelajahi Katalog Toko &rarr;</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Reusable Chatbot -->
+  <div id="chatbot-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

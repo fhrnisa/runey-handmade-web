@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            runey: {
+                pink: '#FBAD9E',
+                yellow: '#FFE072',
+                green: '#A8D6A0',
+                cream: '#FFF8F2',
+                brown: '#5A4038',
+                'pink-hover': '#f99784',
+                'brown-light': '#7a5a50'
+            }
+            },
+            fontFamily: {
+            handwritten: ['"Fredoka"', 'cursive', 'sans-serif'],
+            sans: ['"Quicksand"', 'sans-serif']
+            },
+            borderRadius: {
+            'cute': '1.5rem',
+            'cute-lg': '2.5rem'
+            },
+            boxShadow: {
+            'cute': '0 8px 24px -4px rgba(90, 64, 56, 0.08)',
+            'cute-hover': '0 12px 32px -4px rgba(90, 64, 56, 0.15)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
+
+  <!-- Reusable Navigation Bar Header -->
+  <div id="navbar-container"></div>
+
+  <main class="flex-grow py-8 md:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Breadcrumb Navigation -->
+      <nav class="flex items-center text-xs sm:text-sm text-runey-brown/70 mb-8 space-x-2">
+        <a href="index.html" class="hover:text-runey-pink">Home</a>
+        <span>/</span>
+        <a href="shop.html" class="hover:text-runey-pink">Shop</a>
+        <span>/</span>
+        <span id="breadcrumb-collection" class="hover:text-runey-pink">Koleksi</span>
+        <span>/</span>
+        <span id="breadcrumb-current" class="font-bold text-runey-brown">Detail</span>
+      </nav>
+
+      <!-- Main Product Details Showcase Grid -->
+      <div id="product-detail-container" class="grid grid-cols-1 lg:grid-cols-2 gap-10 bg-white p-6 sm:p-10 rounded-cute-lg shadow-sm border border-runey-pink/20">
+        
+        <!-- Left Column: Image Gallery Showcase -->
+        <div class="space-y-4">
+          <div class="relative h-80 sm:h-96 md:h-[450px] bg-runey-cream rounded-cute overflow-hidden border-2 border-runey-pink/30">
+            <img id="pd-main-image" src="" alt="Product Image" class="w-full h-full object-cover">
+            <span id="pd-availability-badge" class="absolute top-4 right-4 bg-runey-pink text-runey-brown text-xs font-bold px-4 py-1.5 rounded-full shadow-md">
+              Status
+            </span>
+          </div>
+          <!-- Thumbnail Row -->
+          <div id="pd-thumbnails" class="flex gap-3 overflow-x-auto pb-2">
+            <!-- Dynamic thumbnails -->
+          </div>
+        </div>
+
+        <!-- Right Column: Product Meta, Story Teaser, & Actions -->
+        <div class="space-y-6">
+          <div>
+            <p id="pd-collection" class="text-xs font-bold text-runey-pink uppercase tracking-widest bg-runey-pink/10 inline-block px-3 py-1 rounded-full mb-2">
+              Collection Name
+            </p>
+            <h1 id="pd-name" class="text-3xl sm:text-4xl font-bold font-handwritten text-runey-brown">
+              Nama Produk
+            </h1>
+            <p id="pd-price" class="text-2xl font-bold text-runey-brown mt-2">
+              Rp 0
+            </p>
+          </div>
+
+          <!-- Character Story Teaser Card -->
+          <div class="bg-runey-cream/60 p-4 sm:p-5 rounded-cute border border-runey-pink/30 space-y-2">
+            <div class="flex items-center gap-2 text-runey-brown">
+              <span class="text-xl">📖</span>
+              <h3 class="font-handwritten font-bold text-lg">Cerita Karakter (Teaser)</h3>
+            </div>
+            <p id="pd-story" class="text-sm italic text-runey-brown/90 leading-relaxed">
+              "Cerita karakter..."
+            </p>
+            <p class="text-[11px] font-semibold text-runey-brown/60">
+              💡 *Cerita selengkapnya terdapat pada backing card eksklusif di dalam kemasan fisik!*
+            </p>
+          </div>
+
+          <!-- Product Details List -->
+          <div class="space-y-3 border-t border-b border-runey-pink/20 py-4 text-xs sm:text-sm">
+            <div class="flex justify-between"><span class="font-semibold text-runey-brown/70">Material:</span> <span id="pd-material" class="text-right">Acrylic & Clay</span></div>
+            <div class="flex justify-between"><span class="font-semibold text-runey-brown/70">Ukuran Perkiraan:</span> <span id="pd-size" class="text-right">4.5 cm</span></div>
+            <div class="flex justify-between"><span class="font-semibold text-runey-brown/70">Handmade Details:</span> <span id="pd-handmade" class="text-right">Crafted with care</span></div>
+            <div class="flex justify-between"><span class="font-semibold text-runey-brown/70">Informasi Kemasan:</span> <span id="pd-packaging" class="text-right">Backing card + Pouch</span></div>
+          </div>
+
+          <!-- WhatsApp Order Call To Action -->
+          <div class="pt-2">
+            <a id="pd-wa-cta" href="#" target="_blank" rel="noopener noreferrer" class="w-full cute-btn-primary justify-center text-sm py-3 shadow-md">
+              <span>💬 Order via WhatsApp Admin</span>
+            </a>
+            <p class="text-[11px] text-center text-runey-brown/60 mt-2">
+              Kamu akan diarahkan ke WhatsApp resmi Runey Handmade dengan format pesan otomatis.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Related Products Section -->
+      <div class="mt-16">
+        <h2 class="text-2xl font-bold font-handwritten mb-6">Karakter Lain dari Seri Ini</h2>
+        <div id="related-products-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Related Product Cards -->
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Reusable Chatbot -->
+  <div id="chatbot-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

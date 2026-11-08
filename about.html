@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            runey: {
+                pink: '#FBAD9E',
+                yellow: '#FFE072',
+                green: '#A8D6A0',
+                cream: '#FFF8F2',
+                brown: '#5A4038',
+                'pink-hover': '#f99784',
+                'brown-light': '#7a5a50'
+            }
+            },
+            fontFamily: {
+            handwritten: ['"Fredoka"', 'cursive', 'sans-serif'],
+            sans: ['"Quicksand"', 'sans-serif']
+            },
+            borderRadius: {
+            'cute': '1.5rem',
+            'cute-lg': '2.5rem'
+            },
+            boxShadow: {
+            'cute': '0 8px 24px -4px rgba(90, 64, 56, 0.08)',
+            'cute-hover': '0 12px 32px -4px rgba(90, 64, 56, 0.15)',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
+
+  <!-- Reusable Navigation Bar Header -->
+  <div id="navbar-container"></div>
+
+  <main class="flex-grow">
+    <!-- HERO SECTION -->
+    <section class="py-16 md:py-24 bg-white/60 text-center">
+      <div class="max-w-4xl mx-auto px-4 space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-runey-pink bg-runey-pink/10 px-4 py-1.5 rounded-full">Kisah Brand</span>
+        <h1 class="text-4xl sm:text-5xl font-bold font-handwritten text-runey-brown">
+          A Little Story Behind Runey
+        </h1>
+        <p class="text-base sm:text-lg text-runey-brown/80 max-w-2xl mx-auto leading-relaxed">
+          Dari coretan imut di sudut meja hingga menjadi karakter buatan tangan yang menemani harimu.
+        </p>
+      </div>
+    </section>
+
+    <!-- BRAND STORY CONTENT -->
+    <section class="py-16">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        
+        <!-- Story Block 1 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div class="space-y-4">
+            <h2 class="text-3xl font-bold font-handwritten text-runey-brown">Awal Mula Perjalanan</h2>
+            <p class="text-sm sm:text-base text-runey-brown/80 leading-relaxed">
+              Runey Handmade lahir dari kecintaan mendalam terhadap kreasi tangan dan bentuk-bentuk imut yang menghangatkan hati. Kami percaya bahwa objek sederhana seperti gantungan kunci bisa memberikan keceriaan kecil di tengah kesibukan harian.
+            </p>
+            <p class="text-sm sm:text-base text-runey-brown/80 leading-relaxed">
+              Setiap kali ide baru muncul, kami membentuknya secara bertahap—mulai dari memilih warna pastel yang pas, membentuk detail secara cermat, hingga memberikan nama serta karakter unik bagi setiap karya.
+            </p>
+          </div>
+          <div class="bg-white p-4 rounded-cute-lg shadow-sm border border-runey-pink/20">
+            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=800&q=80" alt="Handmade process crafting" class="w-full h-72 object-cover rounded-cute">
+          </div>
+        </div>
+
+        <!-- Tagline Philosophy -->
+        <div class="bg-runey-pink/20 p-8 sm:p-12 rounded-cute-lg border border-runey-pink/30 text-center space-y-4">
+          <span class="text-3xl">✨</span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-handwritten">"Temukan cerita di balik karakter."</h2>
+          <p class="text-sm sm:text-base text-runey-brown/80 max-w-2xl mx-auto leading-relaxed">
+            Tagline ini bukan sekadar slogan, melainkan pengalaman yang ingin kami bagikan. Saat membuka kemasan Runey Handmade, kamu tidak hanya mendapatkan barang fisik, tetapi juga berkenalan dengan kepribadian unik dari karakter yang kamu pilih.
+          </p>
+        </div>
+
+        <!-- Core Brand Values -->
+        <div class="space-y-8">
+          <div class="text-center max-w-xl mx-auto">
+            <h2 class="text-3xl font-bold font-handwritten">Brand Values Kami</h2>
+            <p class="text-sm text-runey-brown/70 mt-1">Prinsip yang selalu melandasi setiap produk Runey.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-cute border border-runey-pink/20 text-center space-y-2">
+              <span class="text-3xl">🎨</span>
+              <h3 class="font-handwritten font-bold text-lg">Creativity</h3>
+              <p class="text-xs text-runey-brown/70">Desain orisinal dan ekspresif yang dibuat dari imajinasi tulus.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-cute border border-runey-pink/20 text-center space-y-2">
+              <span class="text-3xl">🤲</span>
+              <h3 class="font-handwritten font-bold text-lg">Handmade Care</h3>
+              <p class="text-xs text-runey-brown/70">Setiap sentuhan pengerjaan dilakukan penuh dengan kehati-hatian.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-cute border border-runey-pink/20 text-center space-y-2">
+              <span class="text-3xl">🦄</span>
+              <h3 class="font-handwritten font-bold text-lg">Uniqueness</h3>
+              <p class="text-xs text-runey-brown/70">Bentuk serta detail eksklusif yang menjadikan karya ini istimewa.</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-cute border border-runey-pink/20 text-center space-y-2">
+              <span class="text-3xl">🎁</span>
+              <h3 class="font-handwritten font-bold text-lg">Collectible</h3>
+              <p class="text-xs text-runey-brown/70">Menyenangkan untuk dikumpulkan atau dijadikan hadiah untuk sahabat.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="text-center pt-8">
+          <a href="shop.html" class="cute-btn-primary text-sm px-8 py-3">
+            <span>Lihat Koleksi Karakter &rarr;</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Reusable Footer -->
+  <div id="footer-container"></div>
+
+  <!-- Reusable Chatbot -->
+  <div id="chatbot-container"></div>
+
+  <!-- Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
