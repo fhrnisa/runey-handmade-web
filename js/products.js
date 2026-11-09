@@ -5,7 +5,7 @@ const RUNEY_PRODUCTS = [
     name: "Strawberry Donut Keychain",
     category: "Keychain",
     collection: "Sweet Bakery Series",
-    price: 35000,
+    price: 12000,
     isAvailable: true,
     availabilityText: "Ready Stock",
     featured: true,
@@ -26,7 +26,7 @@ const RUNEY_PRODUCTS = [
     name: "Matcha Donut Keychain",
     category: "Keychain",
     collection: "Sweet Bakery Series",
-    price: 35000,
+    price: 12000,
     isAvailable: true,
     availabilityText: "Ready Stock",
     featured: true,
@@ -47,7 +47,7 @@ const RUNEY_PRODUCTS = [
     name: "Cherry Linzer Cookie Keychain",
     category: "Keychain",
     collection: "Sweet Bakery Series",
-    price: 0, // Placeholder
+    price: 12000, // Placeholder
     isAvailable: false,
     availabilityText: "Coming Soon",
     featured: false,
@@ -68,7 +68,7 @@ const RUNEY_PRODUCTS = [
     name: "Strawberry Linzer Cookie Keychain",
     category: "Keychain",
     collection: "Sweet Bakery Series",
-    price: 0, // Placeholder
+    price: 12000, // Placeholder
     isAvailable: false,
     availabilityText: "Coming Soon",
     featured: false,
@@ -89,7 +89,7 @@ const RUNEY_PRODUCTS = [
     name: "Orange Crab Keychain",
     category: "Keychain",
     collection: "Ocean Friends Series",
-    price: 0, // Placeholder
+    price: 12000, // Placeholder
     isAvailable: false,
     availabilityText: "Coming Soon",
     featured: false,
@@ -110,7 +110,7 @@ const RUNEY_PRODUCTS = [
     name: "Sea Horse Keychain",
     category: "Keychain",
     collection: "Ocean Friends Series",
-    price: 0, // Placeholder
+    price: 12000, // Placeholder
     isAvailable: false,
     availabilityText: "Coming Soon",
     featured: false,
@@ -126,6 +126,59 @@ const RUNEY_PRODUCTS = [
     ]
   },
 ];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('featured-products-container');
+  if (!container) return;
+
+  const featuredProducts = RUNEY_PRODUCTS.slice(0, 3);
+
+  const formatRupiah = (number) => {
+    return new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', minimumFractionDigits: 0 }).format(number);
+  };
+
+  container.innerHTML = featuredProducts.map(product => {
+    const isReady = product.isAvailable;
+    const priceDisplay = isReady ? formatRupiah(product.price) : 'Coming Soon';
+    const linkUrl = `shop.html#${product.slug}`;
+
+    return `
+      <a href="${linkUrl}" class="cute-card overflow-hidden group border border-gray-100 rounded-2xl shadow-sm hover:shadow-md transition flex flex-col h-full bg-white">
+        <!-- Bagian Gambar -->
+        <div class="relative overflow-hidden h-60 flex-shrink-0">
+          <img 
+            src="${product.images[0]}" 
+            alt="${product.name}" 
+            class="w-full h-full object-cover group-hover:scale-105 transition duration-300"
+            onerror="this.onerror=null;this.src='https://placehold.co/700x600/FFE9E2/5A4038?text=${encodeURIComponent(product.name)}';"
+          >
+          ${product.badge ? `
+            <span class="absolute top-3 left-3 bg-runey-pink text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+              ${product.badge}
+            </span>
+          ` : ''}
+        </div>
+        
+        <!-- Bagian Konten & Tombol -->
+        <div class="p-5 flex flex-col flex-grow justify-between">
+          <div>
+            <p class="text-xs font-bold text-runey-pink uppercase tracking-wider">${product.collection}</p>
+            <h3 class="font-handwritten text-xl font-bold mt-1 text-gray-800">${product.name}</h3>
+            <p class="text-sm text-runey-brown/70 mt-2 line-clamp-2">${product.shortDescription}</p>
+          </div>
+          
+          <!-- Harga dan Tombol Detail di Bagian Bawah -->
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between">
+            <span class="text-base font-bold text-runey-brown">${priceDisplay}</span>
+            <span class="text-sm font-bold text-runey-pinkdark group-hover:underline flex items-center gap-1">
+              Detail <span>→</span>
+            </span>
+          </div>
+        </div>
+      </a>
+    `;
+  }).join('');
+});
 
 /**
  * Product Data Helper Functions

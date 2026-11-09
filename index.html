@@ -15,6 +15,7 @@
             colors: {
             runey: {
                 pink: '#FBAD9E',
+                pinkdark: '#B35443',
                 yellow: '#FFE072',
                 green: '#A8D6A0',
                 cream: '#FFF8F2',
@@ -39,6 +40,25 @@
         }
     }
     </script>
+      <style>
+          html { scroll-behavior: smooth; }
+          body { font-family: 'Quicksand', sans-serif; }
+          .cute-btn-primary, .cute-btn-secondary {
+            display: inline-flex; align-items: center; justify-content: center; gap: .65rem;
+            padding: .85rem 1.35rem; border-radius: 999px; font-weight: 700;
+            transition: .2s ease; text-decoration: none;
+          }
+          .cute-btn-primary { background: #FBAD9E; color: #5A4038; }
+          .cute-btn-primary:hover { background: #f99784; transform: translateY(-2px); }
+          .cute-btn-secondary { border: 2px solid #5A4038; color: #5A4038; }
+          .cute-btn-secondary:hover { background: #5A4038; color: white; }
+          .cute-card { background: white; border: 1px solid rgba(251,173,158,.35); border-radius: 1.5rem; box-shadow: 0 8px 24px -4px rgba(90,64,56,.08); }
+          .section-kicker { display: inline-block; background: rgba(251,173,158,.18); color: #9b5d50; padding: .35rem .8rem; border-radius: 999px; font-size: .72rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+          .tag-pill { display: inline-flex; padding: .45rem .8rem; border-radius: 999px; background: white; border: 1px solid rgba(90,64,56,.14); font-size: .8rem; font-weight: 600; }
+          details summary { cursor: pointer; list-style: none; }
+          details summary::-webkit-details-marker { display: none; }
+          details[open] summary .faq-plus { transform: rotate(45deg); }
+      </style>
 </head>
 <body class="bg-runey-cream text-runey-brown min-h-screen flex flex-col font-sans">
 
@@ -46,22 +66,23 @@
   <div id="navbar-container"></div>
 
   <main class="flex-grow py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mx-30">
       
-          <div class="space-y-6 text-center lg:text-left">
-            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-runey-yellow/40 border border-runey-yellow text-xs sm:text-sm font-semibold text-runey-brown">
-              <span>✨</span>
-              <span>Koleksi Gantungan Kunci Handmade Cute Terbaik</span>
-            </div>
-            
+    <!-- HERO SECTION -->
+    <section class="py-12 md:py-24 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16">
+
+          <!-- Hero Content: Left -->
+          <div class="space-y-6 text-center lg:text-left order-2 lg:order-1">
             <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-handwritten leading-tight text-runey-brown">
-              Gantungan kunci handmade cute unik untuk koleksimu.
+              Gantungan Kunci Penuh Cerita, Sentuhan Manis untuk Harimu.
             </h1>
-            
+
             <p class="text-base sm:text-lg text-runey-brown/80 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-              Selamat datang di toko resmi Runey Handmade! Kami menghadirkan <a href="shop.html" class="text-runey-pink font-bold underline hover:text-runey-brown">gantungan kunci handmade cute</a> berkarakter unik yang siap menghiasi tas, kunci, dan harimu.
+              Temukan koleksi gantungan kunci kain flanel handmade berkarakter unik dan cute dari Runey Handmade. Dibuat penuh detail dengan warna-warna menggemaskan, setiap produk siap memberikan sentuhan manis untuk menghiasi tas, kunci, dan hari-harimu.
             </p>
-            
+
             <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
               <a href="shop.html" class="w-full sm:w-auto cute-btn-primary">
                 <span>Explore Collection</span>
@@ -73,17 +94,14 @@
             </div>
           </div>
 
-          <div class="relative flex justify-center">
-            <div class="relative w-full max-w-md bg-white p-4 rounded-cute-lg shadow-xl border-4 border-runey-pink/40">
-              <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" alt="Gantungan Kunci Handmade Cute Donat Stroberi" class="w-full h-80 sm:h-96 object-cover rounded-cute">
-              
-              <div class="absolute -bottom-5 -left-5 bg-runey-yellow px-5 py-3 rounded-2xl shadow-lg border-2 border-white flex items-center gap-3">
-                <span class="text-2xl">🍓</span>
-                <div>
-                  <p class="text-xs font-bold text-runey-brown uppercase tracking-wider">Sweet Bakery Series</p>
-                  <p class="text-sm font-handwritten font-bold text-runey-brown">Strawberry Donut Keychain</p>
-                </div>
-              </div>
+          <!-- Hero Image: Right -->
+          <div class="relative flex justify-center order-1 lg:order-2">
+            <div class="relative w-full max-w-md bg-white rounded-cute-lg shadow-xl">
+              <img
+                src="https://i.ibb.co.com/847nyZhP/hero-image-runey.png"
+                alt="Gantungan Kunci Handmade Cute Runey Handmade"
+                class="w-full h-80 sm:h-96 object-cover rounded-cute"
+              >
             </div>
           </div>
 
@@ -102,7 +120,12 @@
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="cute-card p-6 text-center space-y-3">
-            <div class="w-14 h-14 bg-runey-pink/20 rounded-full flex items-center justify-center text-2xl mx-auto">👜</div>
+            <div class="w-14 h-14 bg-runey-pink/20 rounded-full flex items-center justify-center text-2xl mx-auto">
+              <svg class="w-8 h-8" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.62831 16.4002C6.69536 15.5648 7.07457 14.7854 7.69044 14.2171C8.30631 13.6488 9.11364 13.3333 9.95165 13.3335H30.0483C30.8863 13.3333 31.6937 13.6488 32.3095 14.2171C32.9254 14.7854 33.3046 15.5648 33.3717 16.4002L34.71 33.0668C34.7468 33.5255 34.6882 33.9868 34.538 34.4217C34.3878 34.8566 34.1492 35.2557 33.8372 35.5939C33.5251 35.9321 33.1465 36.202 32.725 36.3866C32.3036 36.5713 31.8484 36.6667 31.3883 36.6668H8.61165C8.15152 36.6667 7.6964 36.5713 7.27495 36.3866C6.85349 36.202 6.47483 35.9321 6.16281 35.5939C5.85078 35.2557 5.61215 34.8566 5.46193 34.4217C5.31172 33.9868 5.25317 33.5255 5.28998 33.0668L6.62831 16.4002Z" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#B35443"/>
+              <path d="M26.6666 18.3335V10.0002C26.6666 8.23205 25.9643 6.53636 24.714 5.28612C23.4638 4.03588 21.7681 3.3335 20 3.3335C18.2319 3.3335 16.5362 4.03588 15.2859 5.28612C14.0357 6.53636 13.3333 8.23205 13.3333 10.0002V18.3335" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" stroke="#B35443"/>
+              </svg>
+            </div>
             <h3 class="text-xl font-bold font-handwritten">Mempercantik Aksesoris Tas</h3>
             <p class="text-sm text-runey-brown/70">
               Memberikan sentuhan estetik dan ceria pada tas sekolah, koper travel, mau pun pouch harianmu.
@@ -110,7 +133,11 @@
           </div>
 
           <div class="cute-card p-6 text-center space-y-3">
-            <div class="w-14 h-14 bg-runey-yellow/30 rounded-full flex items-center justify-center text-2xl mx-auto">🎁</div>
+            <div class="w-14 h-14 bg-runey-yellow/30 rounded-full flex items-center justify-center text-2xl mx-auto">
+              <svg class="w-8 h-8" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M33.3333 11.6668H31.3183C31.5607 10.856 31.6781 10.013 31.6666 9.16683C31.6666 5.95016 29.05 3.3335 25.8333 3.3335C23.13 3.3335 21.325 5.8035 20.16 8.47516C19.0116 5.95016 17.115 3.3335 14.1666 3.3335C10.95 3.3335 8.33331 5.95016 8.33331 9.16683C8.33331 10.1602 8.46498 10.9818 8.68165 11.6668H6.66665C4.82831 11.6668 3.33331 13.1618 3.33331 15.0002V18.3335C3.33331 20.1718 4.82831 21.6668 6.66665 21.6668V33.3335C6.66665 35.1718 8.16165 36.6668 9.99998 36.6668H30C31.8383 36.6668 33.3333 35.1718 33.3333 33.3335V21.6668C35.1716 21.6668 36.6666 20.1718 36.6666 18.3335V15.0002C36.6666 13.1618 35.1716 11.6668 33.3333 11.6668ZM25.8333 6.66683C27.2116 6.66683 28.3333 7.7885 28.3333 9.16683C28.3333 11.6668 27.29 11.6668 26.6666 11.6668H22.5366C23.3883 9.04016 24.625 6.66683 25.8333 6.66683ZM11.6666 9.16683C11.6666 7.7885 12.7883 6.66683 14.1666 6.66683C15.6466 6.66683 17.0233 9.2085 17.83 11.6668H13.3333C12.71 11.6668 11.6666 11.6668 11.6666 9.16683ZM6.66665 15.0002H18.3333V18.3335H6.66665V15.0002ZM9.99998 33.3335V21.6668H18.3333V33.3335H9.99998ZM30 33.3335H21.6666V21.6668H30V33.3335ZM21.6666 18.3335V15.1418L21.695 15.0002H33.3333L33.335 18.3335H21.6666Z" fill="#DA9629"/>
+              </svg>
+            </div>
             <h3 class="text-xl font-bold font-handwritten">Hadiah & Kado Berkesan</h3>
             <p class="text-sm text-runey-brown/70">
               Dilengkapi packaging cantik dan cerita unik, sangat cocok sebagai hadiah ulang tahun atau ucapan terima kasih.
@@ -118,7 +145,11 @@
           </div>
 
           <div class="cute-card p-6 text-center space-y-3">
-            <div class="w-14 h-14 bg-runey-green/30 rounded-full flex items-center justify-center text-2xl mx-auto">🔑</div>
+            <div class="w-14 h-14 bg-runey-green/30 rounded-full flex items-center justify-center text-2xl mx-auto">
+              <svg class="w-8 h-8" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 12.5C30 13.163 29.7366 13.7989 29.2678 14.2678C28.7989 14.7366 28.163 15 27.5 15C26.837 15 26.2011 14.7366 25.7322 14.2678C25.2634 13.7989 25 13.163 25 12.5C25 11.837 25.2634 11.2011 25.7322 10.7322C26.2011 10.2634 26.837 10 27.5 10C28.163 10 28.7989 10.2634 29.2678 10.7322C29.7366 11.2011 30 11.837 30 12.5ZM37.5 13.75C37.5 19.9525 32.4525 25 26.25 25H22.965L20.9725 26.9375C20.8717 27.0355 20.755 27.1158 20.6275 27.175L20.18 27.3825C20.0146 27.4588 19.8346 27.498 19.6525 27.4975H17.5V30.73C17.5 31.0625 17.3675 31.38 17.135 31.615L16.6175 32.1325C16.5012 32.2485 16.3632 32.3404 16.2113 32.4031C16.0595 32.4657 15.8968 32.4978 15.7325 32.4975H12.5V35.73C12.4999 36.0609 12.3687 36.3782 12.135 36.6125L11.62 37.13C11.5039 37.2465 11.366 37.3389 11.2141 37.4019C11.0623 37.465 10.8994 37.4975 10.735 37.4975H5C3.62 37.4925 2.5 36.37 2.5 34.995V31.0125C2.5 30.355 2.765 29.71 3.2325 29.245L15.475 17.0025C14.9701 15.3216 14.865 13.5459 15.1682 11.8172C15.4713 10.0885 16.1743 8.45453 17.221 7.04571C18.2677 5.63689 19.6292 4.49219 21.1969 3.70295C22.7645 2.91372 24.4949 2.50178 26.25 2.5C32.4525 2.5 37.5 7.5475 37.5 13.75ZM35 13.75C35 8.925 31.075 5 26.25 5C24.8307 5.00165 23.4331 5.34812 22.1774 6.00959C20.9217 6.67106 19.8456 7.62773 19.0415 8.79727C18.2375 9.9668 17.7297 11.3142 17.5617 12.7235C17.3938 14.1328 17.5708 15.5618 18.0775 16.8875C18.1643 17.1131 18.1838 17.3591 18.1337 17.5956C18.0836 17.8321 17.9659 18.049 17.795 18.22L5 31.015V34.9975H10V31.25C10 30.9185 10.1317 30.6005 10.3661 30.3661C10.6005 30.1317 10.9185 30 11.25 30H15V26.25C15 25.9185 15.1317 25.6005 15.3661 25.3661C15.6005 25.1317 15.9185 25 16.25 25H19.38L21.585 22.855C21.8184 22.6274 22.1315 22.5 22.4575 22.5H26.2525C31.0775 22.5 35.0025 18.575 35.0025 13.75H35Z" fill="#76A86D" stroke-width="0.5" stroke="#76A86D"/>
+              </svg>
+            </div>
             <h3 class="text-xl font-bold font-handwritten">Penanda Kunci Praktis</h3>
             <p class="text-sm text-runey-brown/70">
               Desain berukuran pas dan warna mencolok membantu menandai kunci kendaraan atau rumah agar tidak mudah terselip.
@@ -129,85 +160,169 @@
     </section>
 
     <!-- FEATURED COLLECTION -->
-    <section class="py-16 bg-runey-cream">
+    <section class="py-16 md:py-20">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center max-w-2xl mx-auto mb-12">
-          <span class="text-xs font-bold uppercase tracking-widest text-runey-pink bg-runey-pink/10 px-3 py-1 rounded-full">Koleksi Karakter</span>
-          <h2 class="text-3xl sm:text-4xl font-bold font-handwritten mt-2">Featured Characters</h2>
-          <p class="text-sm text-runey-brown/70 mt-2">Karakter pilihan favorit para pengoleksi Runey Handmade.</p>
+        <div class="mb-9 text-center">
+          <span class="section-kicker">Temukan favoritmu</span>
+          <h2 class="font-handwritten text-3xl sm:text-4xl font-bold mt-3">Pilihan Karakter Runey</h2>
+          <p class="text-sm text-runey-brown/70 mt-2">Intip beberapa koleksi pilihan sebelum melihat katalog lengkap.</p>
         </div>
 
-        <div id="home-featured-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Dynamic cards rendered via script -->
+        <!-- Container Kartu Produk (Dirender via JS) -->
+        <div id="featured-products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
+          <!-- Data produk akan muncul di sini -->
         </div>
 
-        <div class="text-center mt-12">
-          <a href="shop.html" class="cute-btn-secondary">Lihat Semua Koleksi &rarr;</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- BRAND INTRODUCTION -->
-    <section class="py-16 bg-white">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-runey-cream rounded-cute-lg p-8 sm:p-12 border-2 border-runey-pink/30 shadow-md flex flex-col md:flex-row items-center gap-8">
-          <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-runey-green/30 flex items-center justify-center text-4xl sm:text-5xl flex-shrink-0">
-            🎨
-          </div>
-          <div class="space-y-4 text-center md:text-left">
-            <h2 class="text-2xl sm:text-3xl font-bold font-handwritten">Konsep Cute & Collectible</h2>
-            <p class="text-sm sm:text-base text-runey-brown/80 leading-relaxed">
-              Kami percaya bahwa setiap karya yang dibuat dengan tangan memiliki jiwa tersendiri. Di Runey Handmade, setiap gantungan kunci dirancang bukan sekadar hiasan tas, melainkan teman cerita berbentuk karakter imut yang dapat kamu temukan, kenali, dan kumpulkan satu per satu.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PREVIEW GALLERY -->
-    <section class="py-16 bg-runey-cream">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8 gap-4">
-          <div>
-            <h2 class="text-3xl font-bold font-handwritten">Intip Galeri Runey</h2>
-            <p class="text-sm text-runey-brown/70">Momen kreatif dan keindahan detail produk gantungan kunci buatan tangan kami.</p>
-          </div>
-          <a href="gallery.html" class="text-sm font-semibold text-runey-brown hover:text-runey-pink underline">Lihat Galeri Lengkap &rarr;</a>
-        </div>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-          <div class="overflow-hidden rounded-2xl h-48 border border-runey-pink/20">
-            <img src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=400&q=80" alt="Gantungan kunci donat stroberi" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="overflow-hidden rounded-2xl h-48 border border-runey-pink/20">
-            <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=400&q=80" alt="Gantungan kunci donat matcha" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="overflow-hidden rounded-2xl h-48 border border-runey-pink/20">
-            <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=400&q=80" alt="Proses pembuatan handmade" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-          <div class="overflow-hidden rounded-2xl h-48 border border-runey-pink/20">
-            <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=400&q=80" alt="Pengemasan produk backing card" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CALL TO ACTION BANNER -->
-    <section class="py-16 bg-runey-pink/20 border-y border-runey-pink/30">
-      <div class="max-w-5xl mx-auto px-4 text-center space-y-6">
-        <h2 class="text-3xl sm:text-4xl font-bold font-handwritten">Siap Menemukan Karakter Favoritmu?</h2>
-        <p class="text-base text-runey-brown/80 max-w-xl mx-auto">
-          Jelajahi seluruh seri katalog Sweet Bakery Series kami dan pilih teman imutmu hari ini.
-        </p>
-        <div>
-          <a href="shop.html" class="cute-btn-primary text-base px-8 py-3">
-            <span>Mulai Jelajah Shop</span>
+        <!-- Tombol Lihat Semua Koleksi di Bawah Card -->
+        <div class="mt-10 text-center">
+          <a href="shop.html" class="inline-block bg-runey-pink hover:bg-runey-pink/80 text-white font-bold py-3 px-8 rounded-full shadow-md transition duration-300">
+            Lihat Semua Koleksi →
           </a>
         </div>
       </div>
     </section>
 
+     <!-- GALERI FOTO -->
+  <section class="py-16 bg-white border-y border-runey-pink/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Title Section di Tengah -->
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="section-kicker inline-block">Behind the details</span>
+        <h2 class="font-handwritten text-3xl sm:text-4xl font-bold mt-3 text-runey-brown">Galeri Runey Handmade</h2>
+        <p class="text-sm text-runey-brown/70 mt-2">Lihat detail produk, proses kreatif, dan packaging koleksi Runey.</p>
+      </div>
 
+      <!-- Grid Video (3 Kolom dengan Title di bawahnya) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        
+        <!-- Video Item 1 -->
+        <div class="bg-white p-3 rounded-lg shadow-cute border border-runey-pink/10 flex flex-col">
+          <div class="aspect-video rounded-2xl overflow-hidden bg-runey-pink/20">
+            <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/v6mI4aMTDM0?si=yTet5iU0kAe4lYKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3 class="font-bold text-sm text-runey-brown mt-3 px-1">Proses Pembuatan Felt Keychain</h3>
+          <p class="text-xs text-runey-brown/60 px-1 mt-0.5">Behind the scenes pembuatan handmade dengan teliti.</p>
+        </div>
+        
+        <!-- Video Item 2 -->
+        <div class="bg-white p-3 rounded-lg shadow-cute border border-runey-pink/10 flex flex-col">
+          <div class="aspect-video rounded-2xl overflow-hidden bg-runey-pink/20">
+            <iframe class="w-full h-full" width="560" height="315" src="https://www.youtube.com/embed/8nIICc7jVSE?si=DlnumT9_v4J9jJIx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3 class="font-bold text-sm text-runey-brown mt-3 px-1">Detail Karakter Sweet Bakery Series</h3>
+          <p class="text-xs text-runey-brown/60 px-1 mt-0.5">Mengenal karakter lucu di setiap gantungan kunci.</p>
+        </div>
+
+        <!-- Video Item 3 (Contoh video aktif) -->
+        <div class="bg-white p-3 rounded-lg shadow-cute border border-runey-pink/10 flex flex-col">
+          <div class="aspect-video rounded-2xl overflow-hidden bg-runey-pink/20">
+            <iframe class="w-full h-full" src="https://www.youtube.com/embed/AWPibFAdUqQ?si=16KytQDJnfEwy17u" title="Packaging Experience Runey Handmade" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+          <h3 class="font-bold text-sm text-runey-brown mt-3 px-1">Unboxing & Cute Packaging</h3>
+          <p class="text-xs text-runey-brown/60 px-1 mt-0.5">Pengalaman spesial saat membuka paket dari Runey.</p>
+        </div>
+
+      </div>
+
+      <!-- Tombol di Bawah Ketiga Video -->
+      <div class="text-center mt-10">
+        <a href="gallery.html#video" class="cute-btn-secondary inline-block">Lihat semua video dan foto</a>
+      </div>
+
+    </div>
+  </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16">
+      <div class="max-w-3xl mx-auto px-4 sm:px-6">
+        <div class="text-center mb-9"><span class="section-kicker">Frequently Asked Questions</span><h2 class="font-handwritten text-3xl sm:text-4xl font-bold mt-3">Ada yang Ingin Kamu Tanyakan?</h2></div>
+        <div class="space-y-3">
+          <details class="cute-card p-5"><summary class="flex items-center justify-between gap-4 font-bold">Apa bahan utama produk Runey Handmade?<span class="faq-plus text-2xl transition">+</span></summary><p class="text-sm leading-relaxed text-runey-brown/70 mt-3">Koleksi gantungan kunci Runey menggunakan kain flanel dan dibuat dengan sentuhan handmade. Detail bahan dan ukuran dapat ditanyakan melalui WhatsApp pada masing-masing produk.</p></details>
+          <details class="cute-card p-5"><summary class="flex items-center justify-between gap-4 font-bold">Bagaimana cara memesan produk?<span class="faq-plus text-2xl transition">+</span></summary><p class="text-sm leading-relaxed text-runey-brown/70 mt-3">Pilih produk dari halaman katalog, lalu hubungi Runey melalui tombol WhatsApp. Sertakan nama produk dan jumlah yang ingin dipesan agar admin dapat membantu mengecek ketersediaannya.</p></details>
+          <details class="cute-card p-5"><summary class="flex items-center justify-between gap-4 font-bold">Apakah produk cocok untuk hadiah?<span class="faq-plus text-2xl transition">+</span></summary><p class="text-sm leading-relaxed text-runey-brown/70 mt-3">Gantungan kunci Runey dapat dijadikan hadiah kecil untuk teman atau orang terdekat. Tanyakan pilihan packaging dan backing card yang tersedia sebelum memesan.</p></details>
+          <details class="cute-card p-5"><summary class="flex items-center justify-between gap-4 font-bold">Apakah semua produk selalu tersedia?<span class="faq-plus text-2xl transition">+</span></summary><p class="text-sm leading-relaxed text-runey-brown/70 mt-3">Ketersediaan dapat berubah mengikuti stok dan proses pembuatan. Silakan konfirmasi melalui WhatsApp sebelum melakukan pemesanan.</p></details>
+          <details class="cute-card p-5"><summary class="flex items-center justify-between gap-4 font-bold">Di mana saya bisa melihat koleksi lengkap?<span class="faq-plus text-2xl transition">+</span></summary><p class="text-sm leading-relaxed text-runey-brown/70 mt-3">Kunjungi halaman <a href="shop.html" class="underline font-bold">Produk</a> untuk melihat katalog, atau halaman <a href="gallery.html" class="underline font-bold">Galeri</a> untuk melihat foto dan video Runey.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- KONTAK DAN LOKASI -->
+    <section id="kontak" class="py-16 bg-white border-y border-runey-pink/20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <span class="section-kicker">Let's connect</span>
+          <h2 class="font-handwritten text-3xl sm:text-4xl font-bold mt-3">Punya Karakter Favorit?</h2>
+          <p class="text-sm sm:text-base text-runey-brown/75 leading-relaxed mt-4">Hubungi Runey Handmade untuk bertanya tentang katalog, ketersediaan produk, dan proses pemesanan. Kami akan membantu kamu menemukan gantungan kunci yang paling cocok.</p>
+          <a href="https://wa.me/62XXXXXXXXXXX?text=Halo%20Runey%20Handmade%2C%20saya%20ingin%20memesan%20produk." target="_blank" rel="noopener" class="cute-btn-primary mt-6"> <span>Chat WhatsApp</span><span>↗</span></a>
+          <div class="mt-7 space-y-2 text-sm">
+            <p><strong>WhatsApp:</strong> [Masukkan nomor WhatsApp bisnis]</p>
+            <p><strong>Lokasi:</strong> [Masukkan alamat toko/lokasi usaha jika ada]</p>
+            <p class="text-xs text-runey-brown/60">Jika beroperasi dari rumah atau hanya online, jelaskan area layanan dan jangan mencantumkan alamat pribadi yang tidak ingin dipublikasikan.</p>
+          </div>
+        </div>
+        <div class="rounded-cute-lg overflow-hidden border-4 border-runey-pink/30 bg-runey-cream p-3">
+          <!-- GANTI query pada URL peta dengan alamat atau titik lokasi usaha yang benar -->
+          <iframe title="Peta lokasi Runey Handmade" src="https://www.google.com/maps?q=Semarang&output=embed" class="w-full h-64 sm:h-80 rounded-2xl border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <a href="https://www.google.com/maps/search/?api=1&query=Semarang" target="_blank" rel="noopener" class="block text-center text-sm font-bold underline mt-3">Buka lokasi di Google Maps ↗</a>
+        </div>
+      </div>
+    </section>
+
+  <!-- CTA -->
+    <section class="py-16 bg-runey-pink/25">
+      <div class="max-w-4xl mx-auto px-4 text-center">
+        <h2 class="font-handwritten text-3xl sm:text-4xl font-bold text-[#5A4038]">Temukan Si Kecil yang Paling Mewakilimu!</h2>
+        <p class="text-sm sm:text-base text-[#5A4038]/75 mt-3">Pilih karakter favoritmu dan tambahkan sentuhan handmade ke hari-harimu.</p>
+        
+        <!-- Tombol Utama (Hanya Katalog) -->
+        <div class="flex justify-center mt-6">
+          <a href="shop.html" class="cute-btn-primary">Lihat Katalog Produk</a>
+        </div>
+
+        <!-- Tautan Media Sosial -->
+        <div class="mt-8 pt-6 border-t border-[#FBAD9E]/40">
+          <p class="text-xs font-bold text-[#5A4038]/70 uppercase tracking-wider mb-3">Ikuti Kami di Media Sosial</p>
+          <div class="flex items-center justify-center gap-3">
+            
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/USERNAME/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Runey Handmade" title="Instagram" class="w-10 h-10 rounded-full bg-white border border-[#FBAD9E]/30 hover:bg-[#FBAD9E] hover:text-white text-[#5A4038] flex items-center justify-center transition-colors shadow-sm">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 fill-none stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@USERNAME" target="_blank" rel="noopener noreferrer" aria-label="TikTok Runey Handmade" title="TikTok" class="w-10 h-10 rounded-full bg-white border border-[#FBAD9E]/30 hover:bg-[#FBAD9E] hover:text-white text-[#5A4038] flex items-center justify-center transition-colors shadow-sm">
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 3.2 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.24-.1z"/></svg>
+            </a>
+
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/PAGE/" target="_blank" rel="noopener noreferrer" aria-label="Facebook Runey Handmade" title="Facebook" class="w-10 h-10 rounded-full bg-white border border-[#FBAD9E]/30 hover:bg-[#FBAD9E] hover:text-white text-[#5A4038] flex items-center justify-center transition-colors shadow-sm">
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HASHTAGS DAN TAG DI BAGIAN AKHIR HALAMAN -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-7">
+        <div>
+          <h2 class="font-handwritten text-2xl font-bold mb-3">Hashtag Runey Handmade</h2>
+          <div class="flex flex-wrap gap-2 text-sm text-runey-brown/75">
+            <span>#RuneyHandmade</span><span>#GantunganKunciHandmade</span><span>#GantunganKunciFlanel</span><span>#HandmadeKeychain</span><span>#CuteKeychain</span><span>#AksesorisLucu</span><span>#HadiahHandmade</span><span>#FlanelCraft</span><span>#CuteAndCollectible</span><span>#SweetBakerySeries</span>
+          </div>
+        </div>
+        <div>
+          <h2 class="font-handwritten text-2xl font-bold mb-3">Tag</h2>
+          <div class="flex flex-wrap gap-2">
+            <span class="tag-pill">Runey Handmade</span><span class="tag-pill">Gantungan Kunci</span><span class="tag-pill">Gantungan Kunci Handmade</span><span class="tag-pill">Gantungan Kunci Flanel</span><span class="tag-pill">Donut Keychain</span><span class="tag-pill">Sweet Bakery Series</span><span class="tag-pill">Aksesori Tas</span><span class="tag-pill">Hadiah Unik</span><span class="tag-pill">Kerajinan Tangan</span><span class="tag-pill">Cute Collectible</span>
+          </div>
+        </div>
+      </div>
+    </section>
     </div>
   </main>
 
